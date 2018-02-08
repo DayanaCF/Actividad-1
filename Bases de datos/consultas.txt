@@ -1,0 +1,7 @@
+Consultas:
+1.	DELETE * FROM Libros WHERE nombre= “Harry Potter”
+2.	UPDATE Usuario SET apellido2= “Rodríguez” WHERE nombre1= “Antonio” AND apellido1= “García” AND apellido2= “Benites”
+3.	INSERT INTO Usuario (nombre1, apellido1) VALUES (“Miguel”, “López”)
+4.	SELECT nombre, descripción FROM Libros WHERE fecha_publicacion= “02/02/2017”
+5.	UPDATE libros SET nombre="el amor" WHERE nombre=" sentimientos"
+
