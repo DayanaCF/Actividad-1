@@ -1,0 +1,5 @@
+Se pretende hacer una página web para las personas que les gusta leer y escribir libros, las personas tienen que registrarse para ser un usuario, 
+de cada usuario se necesita saber: nombre, apellido, correo electrónico, descripción de sí mismo, nombre de usuario, especificar si es lector o escritor (rol). 
+Cada libro tiene un nombre, número de páginas, fecha de publicación, autor y descripción. Los libros se divididos en categorías. 
+Una categoría puede tener muchos libros y un libro pertenece a una categoría. Un usuario puede leer muchos libros y un libro puede ser
+ leído por muchos usuarios, además un escritor puede escribir muchos libros, pero un libro solo puede ser escrito por un escritor.
