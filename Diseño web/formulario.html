@@ -1,199 +1,231 @@
+<!doctype html>
 <html>
-   <head>
-   <meta charset="UTF-8">
-   </head>
-<h1>Formulario inscripción .</h1>
-        
-      <br>
-      <tr>
-         <td><b><label>Nombre 1</label> 
-         <td><input name='nombre1' type='text' required autofocus /></td></b></td>
-         </b>
-      </tr>
-      <br>
-      <br>
-      <tr>
-         <td><b><label>Nombre 2</label> 
-         <td><b><input name='nombre2' type='text' required /></b></td></b></td>
-         </b>
-      </tr>
-      <br>
-      <br>
-      <tr>
-         <td><b><label>Apellido 1</label> 
-         <td><b><input name='apellido1' type='text' required /></b></td>
-         </b>
-      </tr>
-      <br>
-      <br>
-      <tr>
-      <th><b><label>Apellido 2</label> 
-            <th><b><input name='apellido2' type='text'/></b></th>
+<head>
+<meta charset="utf-8">
+<title> Biblioteca </title>
+</head>
+
+<body>
+<h2>Formulario de Inscripción</h2>
+<form action="conexion.php" method="post" enctype="multipart/form-data" name="form1">
+<tr>
+  <td>Nombre 1: 
+    <label for="nombre1"></label></td>
+  <td><input type="text" name="nombre1" id="nombre1"></td>
+  
+  </tr>
+
+  <br>
+  <br>
+  <tr>
+  <td>Nombre 2: 
+    <label for="nombre2"></label></td>
+  <td><input type="text" name="nombre2" id="nombre2"></td>
+  
+  
+  </tr>
+
+  <br>
+  <br>
+  <tr>
+  <td>Apellido 1: 
+    <label for="apellido1"></label></td>
+  <td><input type="text" name="apellido1" id="apellido1"></td>
+  
+  
+  </tr>
+
+  <br>
+  <br>
+  <tr>
+  <td>Apellido 2: 
+    <label for="apellido2"></label></td>
+  <td><input type="text" name="apellido2" id="apellido2"></td>
+  
+  
+  </tr>
+<br>
+   <br>
+ <tr>
+    <td>Nombre de usuario:
+      <label for "nombredeusuario"></label></td>
+            <td><input name='nombreusuario' type='username' id="nombredeusuario"> </td>
             </b>
       </tr>
-      <br>
-      <br>
-      <tr>
-      <th><b><label>E-mail</label>
-           <th><b><input name='email' type='email' /></b></th>
-           </b>
-            </th>
-            </tr>
-        
+      
+<br>
+  <br>
 
-      <br>
-      <br>
-      <tr>
-      <th><b><label>Nombre de usuario</label>
-            <th><b><input name='nombreusuario' type='varchar'  /></b></th>
+  <tr>
+  <td>E-mail: 
+    <label for="correo"></label></td>
+  <td><input type="email" name="correo" id="correo"></td>
+  
+  
+  </tr>
+  <br>
+  <br>
+
+
+ <tr>
+     <td> Rol:
+     <label for="rol"></label></td>
+    <th><b> <select name="rol">
+     <option value="escritor">ESCRITOR</option>
+     <option value="lector">LECTOR</option>
+     </select>
+     </b>
+     </th>
+     </tr>
+
+     <br>
+     <br>
+
+  <tr><td>Descripción: 
+    <label for="descripcion"></label></td>
+    <td><textarea name="descripcion" id="descripcion" rows="10" cols="30"></textarea></td>
+    </tr>
+
+    <br>
+    <br>
+
+
+     <input type="hidden" name="MAX_TAM" value="2097152">
+  <tr>
+  <td colspan="2" align="center">FOTO: Seleccione una imagen con tamaño inferior a 2 MB</td></tr>
+  <tr>
+    <td colspan="2" align="left"><input type="file" name="foto" id="foto"></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center">  
+<br>
+   <br>
+ <tr>
+    <td>Contraseña:
+      <label for "contrasena"></label></td>
+            <td><input name='contrasena' type='password' id="contrasena"> </td>
             </b>
       </tr>
-      <br>
-      <br>
-      <tr>
-      <th><b><label>Descripción</label>
-            <th><b><input name='descripcion' type='text' /></b></th>
+
+
+
+
+
+    <br>
+    <br>
+
+    <input type="submit" name="btn_enviar" id="btn_enviar" value="Enviar"></td></tr>
+
+      
+
+
+<br>
+<br>
+<br>
+
+<h2>Ingresar</h2>
+
+<br>
+<br>
+
+<tr>
+  <td>Nombre de usuario: 
+    <label for="nombredeusuario"></label></td>
+  <td><input type="username" name="nombredeusuario" id="nombredeusuario"></td>
+  
+  
+  </tr>
+<br>
+<br>
+<tr>
+    <td>Contraseña:
+      <label for "contrasena"></label></td>
+            <td><input name='contrasena' type='password' id="contraseña"> </td>
             </b>
       </tr>
+ <br>
+    <br>
+
+    <input type="submit" name="btn_enviar" id="btn_enviar" value="Enviar"></td></tr>
+
+
+
+<br>
+<br>
+<br>
+
+<body>
+<h2>Buscar libros por CATEGORÍA</h2>
+
+
+<br>
+<br>
+
+
+ <tr>
+     <td> Categoria:
+     <label for="categoria"></label></td>
+    <th><b> <select name="categoria">
+     <option value="accion">ACCIÓN</option>
+     <option value="aventura">AVENTURA</option>
+     <option value="romance">ROMANCE</option>
+     <option value="fantasia">FANTASÍA</option>
+     <option value="humor">HUMOR</option>
+     <option value="poesia">POESÍA</option>
+     <option value="misterio">MISTERIO</option>
+     <option value="terror">TERROR</option>
+     <option value="religioso">RELIGIOSO</option>
+     </select>
+     </b>
+     </th>
+     </tr>
+
       <br>
-      <br>
-      <tr>
-      <th><b><label>Contraseña</label>
-            <th><b><input name='contrasena' type='password' /></b></th>
-      </b>
-      <br>
-      <br>
-      <tr>
-      <th><b><label>Rol</label>
-            <th><b><select name="rol" >
-                <option value="escritor">ESCRITOR</option>
-                <option value="lector">LECTOR</option></b></th>
-                </b>
-      </tr>
-      <br>
-      <br>
-      <br>
-      <input type='submit' name='submit' value='Enviar' />
-      <br>
-      <h1>Gracias por digitar sus datos .</h1>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <h1>INGRESAR .</h1>
-      <br>
-      <tr>
-      <th><b><label>Nombre de usuario</label>
-            <th><b><input name='nombreusuario' type='varchar'  /></b></th>
+    <br>
+
+    <input type="submit" name="btn_enviar" id="btn_enviar" value="Buscar"></td></tr>
+
+
+
+ 
+
+
+<br>
+<br>
+<br>
+
+
+<h2>Buscar libros por FECHA</h2>
+<form action="conectar.php" method="post" enctype="multipart/form-data" name="form1">
+
+<br>
+<br>
+
+
+ <tr>
+ <td>Fecha de publicación:
+      <label for "fechadepublicacion"></label></td>
+            <td><input name='fechadepublicacion' type='date' id="fechadepublicacion"> </td>
             </b>
       </tr>
-      <br>
-      <br>
-      <tr>
-      <th><b><label>Contraseña</label>
-            <th><b><input name='contrasena' type='password' /></b></th>
-      </b>
-      </tr>
-      <br>
-      <br>
-      <br>
-      <input type='submit' name='submit' value='Enviar' />
-      <br>
-      <h1>¡Bienvenido! .</h1>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-       <h1>Buscar libros por categorias.</h1>
-      <br>
-      <tr>
-      <th><b><label>Categoria</label>
-            <th><b><input name='categoria' type='text'  /></b></th>
-            </b>
-      </tr>
-      <br>
-      <br>
-      <br>
-      <input type='submit' name='submit' value='Enviar' />
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-            <h1> Buscar libros por fecha </h1>
-      <br>
-      <tr>
-      <th><b><label>Fecha de publicación</label>
-            <th><b><input name='fechapublicacion' type='date'  /></b></th>
-            </b>
-      </tr>
-      <br>
-      <br>
-      <input type='submit' name='submit' value='Enviar' />
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-                  <h1> Cambiar nombre del libro </h1>
-      <br>
-      <tr>
-      <th><b><label>Nombre actual del libro</label>
-            <th><b><input name='nombre' type='text'  /></b></th>
-            </b>
-      </tr>
-      <br>
-      <br>
-       <tr>
-      <th><b><label>Nombre nuevo del libro</label>
-            <th><b><input name='nombre' type='text'  /></b></th>
-            </b>
-      </tr>
-      <br>
-      <br>
-      <input type='submit' name='submit' value='Enviar' />
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-                 <h1> Eliminar libro </h1>
-      <br>
-      <tr>
-      <th><b><label>Nombre del libro</label>
-            <th><b><input name='nombre' type='text'  /></b></th>
-            </b>
-      </tr>
-      <br>
-      <br>
-      <input type='submit' name='submit' value='Enviar' />
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+ <br>
+    <br>
+
+    <input type="submit" name="btn_enviar" id="btn_enviar" value="Buscar"></td></tr>
 
 
 
 
 
+<br>
+<br>
+<br>
 
 
 
 
+   </form>
+<p>&nbsp;</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-   </html>
+</body>
+</html>

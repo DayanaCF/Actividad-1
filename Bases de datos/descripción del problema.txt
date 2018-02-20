@@ -1,6 +1,8 @@
 Se pretende hacer una página web para las personas que les gusta leer y escribir libros.
-las personas tienen que registrarse para ser un lector o un escritor, si es lector se necesita saber: nombre, apellido, correo electronico, descripcion de 
-si mismo y nombre de usuario. si la persona es un escritor se necesita saber: nombre, aopellido, edad, correo electronico y descripcion de si mismo. 
-cada libro que esta en la pagina tiene un nombre, fecha de publicacion, autor, descripcion y categoria.
-un lector puede leer muchos libros y un libro puede ser leido por muchos lectores, ademas un escritor puede escribir muchos libros, pero un libro puede ser escrito
-por un escritor.
+Para ser usurio se necesita conocer:
+nombre, apellido, correo electronico, descripción de si mismo, nombre de usuario, rol, foto y contraseña,  
+cada libro que está en la página tiene un nombre, fecha de publicación, autor, descripción y categoria. 
+a su vez la categoría puede ser:  acción, aventura, romance, fantasia, humor, poesia,
+misterio, terror y religioso. un libro solo puede tener una categoria, pero en una categoria pueden haber muchos libros. un usuario lector puede leer muchos 
+libros y un libro puede ser leido por muchos usuarios lectores, ademas un usuario escritor puede escribir muchos libros, pero un libro puede ser escrito
+por un usuario escritor.
