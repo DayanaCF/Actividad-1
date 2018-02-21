@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-02-2018 a las 12:27:41
+-- Tiempo de generación: 22-02-2018 a las 00:38:52
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -25,80 +25,69 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categoria`
+-- Estructura de tabla para la tabla `escritor`
 --
 
-CREATE TABLE `categoria` (
-  `id` int(11) NOT NULL,
-  `accion` varchar(30) NOT NULL,
-  `aventura` varchar(30) NOT NULL,
-  `romance` varchar(30) NOT NULL,
-  `fantasia` varchar(30) NOT NULL,
-  `humor` varchar(30) NOT NULL,
-  `poesia` varchar(30) NOT NULL,
-  `misterio` varchar(30) NOT NULL,
-  `terror` varchar(30) NOT NULL,
-  `religioso` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `libro`
---
-
-CREATE TABLE `libro` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `fecha_publicacion` varchar(30) NOT NULL,
-  `autor` varchar(30) NOT NULL,
-  `descripcion` varchar(100) NOT NULL,
-  `categoria` varchar(30) NOT NULL,
-  `id_categoria` varchar(10) NOT NULL,
-  `id_usuario` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario`
---
-
-CREATE TABLE `usuario` (
+CREATE TABLE `escritor` (
   `id` int(11) NOT NULL,
   `nombre1` varchar(30) NOT NULL,
   `nombre2` varchar(30) NOT NULL,
   `apellido1` varchar(30) NOT NULL,
   `apellido2` varchar(30) NOT NULL,
-  `nombreusuario` varchar(30) NOT NULL,
   `correo` varchar(30) NOT NULL,
-  `rol` varchar(30) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
   `descripcion` varchar(100) NOT NULL,
-  `foto` varchar(35) NOT NULL,
-  `contrasena` varchar(10) NOT NULL,
-  `fecha` datetime(6) NOT NULL
+  `contrasena` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `escritor`
+--
+
+INSERT INTO `escritor` (`id`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `correo`, `usuario`, `descripcion`, `contrasena`) VALUES
+(1, 'Juan', 'Carlos', 'Alvarez', 'Diaz', 'juancho@gmail.com', '', 'Me considero una persona amante de la vida y la pasiÃ³n. Me gusta escribir libros de amor y experien', 'hola123'),
+(5, 'Maria', 'Angelica', 'Lopez', 'Ramos', 'angelicamaria@hotmail.com', '', 'Soy una mujer soÃ±adora y creyente de que las cosas que quieres las puedes hacer realidad. Me gustar', 'ange0976');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `lector`
+--
+
+CREATE TABLE `lector` (
+  `id` int(11) NOT NULL,
+  `nombre1` varchar(30) NOT NULL,
+  `nombre2` varchar(30) NOT NULL,
+  `apellido1` varchar(30) NOT NULL,
+  `apellido2` varchar(30) NOT NULL,
+  `correo` varchar(30) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
+  `descripcion` varchar(100) NOT NULL,
+  `contrasena` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `lector`
+--
+
+INSERT INTO `lector` (`id`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `correo`, `usuario`, `descripcion`, `contrasena`) VALUES
+(1, 'Juan', 'Felipe', 'Tuiran', 'Jimenez', 'juantjj1997@gmail.com', 'JuanFTJ', 'Me gusta leer todo tipo de libro, sobre todo los de acciÃ³n.', '123456'),
+(2, 'Cristobal', 'JosÃ©', 'Mendoza', 'Martinez', 'lomejor@hotmail.com', '', 'Â¡Hola! Soy Cristian, pero me pueden llamar \"Cris\" Amo los animales y leer sobre naturaleza y cosas ', 'cris123');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `categoria`
+-- Indices de la tabla `escritor`
 --
-ALTER TABLE `categoria`
+ALTER TABLE `escritor`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `libro`
+-- Indices de la tabla `lector`
 --
-ALTER TABLE `libro`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
+ALTER TABLE `lector`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -106,20 +95,15 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `categoria`
+-- AUTO_INCREMENT de la tabla `escritor`
 --
-ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `escritor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT de la tabla `libro`
+-- AUTO_INCREMENT de la tabla `lector`
 --
-ALTER TABLE `libro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+ALTER TABLE `lector`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
