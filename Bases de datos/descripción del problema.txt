@@ -1,7 +1,7 @@
 Se pretende hacer una página web para las personas que les gusta leer y escribir libros.
 Para ser escritor o lector se necesita saber:
-nombre, apellido, correo electronico, descripción de si mismo, nombre de usuario, foto y contraseña,  
+nombre, apellido, correo electronico, descripción de si mismo, nombre de usuario, foto y contraseña.  
 cada libro que está en la página tiene un nombre, fecha de publicación, autor, descripción y categoria. 
 un lector puede leer muchos 
-libros y un libro puede ser leido por muchos usuarios lectores. un escritor puede escribir muchos libros, 
-pero un libro puede ser escrito por un escritor, ademas un lector puede leer muchos libros y un libro puede ser leido por muchos lectores.
+libros y un libro puede ser leido por muchos lectores. un escritor puede escribir muchos libros, 
+pero un libro puede ser escrito por un escritor.
